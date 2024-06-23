@@ -14,22 +14,12 @@ Service to create short urls
 
 ## Getting Started
 
-**Create virtual environment**
+**Setup application**
+
+This will create virtual environmnet, install dependencies and initilize db
 
 ```sh
-make venv
-```
-
-**Install dependencies**
-
-```sh
-make install-deps
-```
-
-**Initialize database**
-
-```sh
-make init_db
+make setup
 ```
 
 **Start the server**

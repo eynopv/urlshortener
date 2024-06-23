@@ -17,3 +17,14 @@ test:
 
 init_db:
 	${VENV_BIN}/python -m shorturl.init_db
+
+setup:
+	$(MAKE) venv
+	$(MAKE) install-deps
+	$(MAKE) init_db
+
+.PHONY: clean
+clean:
+	rm -rf .venv
+	rm -f test.db
+	rm -f shorturl.db
