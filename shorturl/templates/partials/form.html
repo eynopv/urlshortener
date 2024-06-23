@@ -1,0 +1,17 @@
+<form hx-post="/" class="mt-4">
+  <div class="mb-2">
+    <label class="label" for="url-input">Enter URL:</label>
+    <input
+      class="{{'input is-primary' if not input_error else 'input is-danger' }}"
+      type="text"
+      id="url-input"
+      name="destination"
+      value="{{ destination if destination else '' }}"
+      placeholder="https://example.com"
+    />
+    {% if input_error %}
+    <p class="is-danger">{{ input_error }}</p>
+    {% endif %}
+  </div>
+  <button class="button is-primary" type="submit">Shorten URL</button>
+</form>
